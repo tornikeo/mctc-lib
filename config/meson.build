@@ -51,9 +51,9 @@ jsonfortran_dep = dependency(
   'json-fortran',
   required: get_option('json'),
   fallback: ['json-fortran-8.2.5','jsonfortran_dep'],
-  default_options: [
-    'default_library=static',
-  ],
+  # default_options: [
+  #   'default_library=static',
+  # ],
   static: get_option('default_library') != 'dynamic',
 )
 lib_deps += jsonfortran_dep
